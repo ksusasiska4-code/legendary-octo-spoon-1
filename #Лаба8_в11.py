@@ -10,30 +10,30 @@
 #Выполнить транспонирование квадратной матрицы. 
 is_correct_n = False
 numbers = '0123456789'
-while is_correct_n == False:
+while is_correct_n == False:    #Проверка на вводимые данные
     n = input('Введите количество столбцов матрицы: ')
     is_correct_n = True
-    if len(n) == 0:
+    if len(n) == 0:   #Если просто нажали enter
         is_correct_n = False
-    for i in range(len(n)):
+    for i in range(len(n)):    #пробегаемся по элементам и сверяем, чтобы это были цифры
         if n[i] not in numbers:
             is_correct_n = False
-    if is_correct_n == True:
+    if is_correct_n == True:    #если предыдущие условия не обратили флаг в False, то интуем
         n = int(n)
-        if n <= 0:
+        if n <= 0:   #вводимое число должно быть целым и положительным
             is_correct_n = False
 column = n
 is_correct_m = False
-while is_correct_m == False:
+while is_correct_m == False:    #Проверка на вводимые данные
     m = input('Введите количество строк матрицы: ')
-    if_correct_m = True
-    if len(m) == 0:
+    is_correct_m = True
+    if len(m) == 0:    #Если просто нажали enter
         is_correct_m = False
-    for i in range(len(m)):
+    for i in range(len(m)):   #пробегаемся по элементам и сверяем, чтобы это были цифры
         if m[i] not in numbers:
             is_correct_m = False
-    if is_correct_m == True:
+    if is_correct_m == True:    #если предыдущие условия не обратили флаг в False, то интуем
         m = int(m)
-        if m <= 0:
+        if m <= 0:   #вводимое число должно быть целым и положительным
             is_correct_m = False
-line = m
+row = m
